@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DatalogicsPDFWebAPILibrary.iml" filepath="$PROJECT_DIR$/DatalogicsPDFWebAPILibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDFWebAPILibrary/PDFWebAPILibrary.iml" filepath="$PROJECT_DIR$/PDFWebAPILibrary/PDFWebAPILibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
