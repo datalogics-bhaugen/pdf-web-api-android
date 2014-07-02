@@ -6,11 +6,21 @@ import android.os.AsyncTask;
  * Created by bhaugen on 7/1/14.
  */
 public class BasicRequest extends AsyncTask {
+
+    final static String WEB_API_URL = "https://pdfprocess.datalogics-cloud.com/api/actions/";
+
     String applicationID;
     String applicationKey;
 
     String inputFile;
     String inputFilePassword;
+
+    public BasicRequest(String applicationID, String applicationKey, String inputFile) {
+        this.applicationID = applicationID;
+        this.applicationKey = applicationKey;
+
+        this.inputFile = inputFile;
+    }
 
     public String getApplicationID() {
         return applicationID;
