@@ -16,6 +16,7 @@ public class PDFWebAPISampleActivity extends Activity {
 
         String inputFile = "sdcard/test.pdf";
         String decorationDataFile = "sdcard/decoration.xml";
+        String outputTXTFile = "sdcard/test_output.txt";
 //        String inputFilePassword = "password";
         String applicationID = "***REMOVED***";
         String applicationKey = "***REMOVED***";
@@ -24,6 +25,8 @@ public class PDFWebAPISampleActivity extends Activity {
         DecorateDocumentRequest webAPITask = new DecorateDocumentRequest(applicationID, applicationKey, inputFile, decorationDataFile);
 
         webAPITask.execute();
+        PropertiesRequest webAPIPropertiesTask = new PropertiesRequest(applicationID, applicationKey, inputFile, outputTXTFile, "");
+        webAPIPropertiesTask.execute();
     }
 
 
