@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.datalogics.pdf.web.PropertiesRequest;
 import com.datalogics.pdf.web.DecorateDocumentRequest;
 
 public class PDFWebAPISampleActivity extends Activity {
@@ -22,7 +23,7 @@ public class PDFWebAPISampleActivity extends Activity {
         String applicationKey = "";
 
         // Invoke a PDF Web API to do something by using an Async Task
-        DecorateDocumentRequest webAPITask = new DecorateDocumentRequest(applicationID, applicationKey, inputFile, decorationDataFile);
+        DecorateDocumentRequest webAPITask = new DecorateDocumentRequest(applicationID, applicationKey, inputFile, outputTXTFile, decorationDataFile);
 
         webAPITask.execute();
         PropertiesRequest webAPIPropertiesTask = new PropertiesRequest(applicationID, applicationKey, inputFile, outputTXTFile, "");
