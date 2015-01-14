@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.datalogics.pdf.web.AddImagesRequest;
 import com.datalogics.pdf.web.PropertiesRequest;
 import com.datalogics.pdf.web.DecorateDocumentRequest;
 
@@ -16,18 +17,24 @@ public class PDFWebAPISampleActivity extends Activity {
         setContentView(R.layout.activity_pdfweb_apisample);
 
         String inputFile = "sdcard/test.pdf";
-        String decorationDataFile = "sdcard/decoration.xml";
-        String outputTXTFile = "sdcard/test_output.txt";
+        String decorationDataFile = "sdcard/decoration.json";
+        String imageSettingsFile = "sdcard/imageSettings.json";
+        String outputTXTFile = "sdcard/testOutputTXT.txt";
+        String outputPDFFile = "sdcard/testOutputPDF.pdf";
+        String inputImageFile = "sdcard/testImage.jpg";
 //        String inputFilePassword = "password";
         String applicationID = "";
         String applicationKey = "";
 
         // Invoke a PDF Web API to do something by using an Async Task
-        DecorateDocumentRequest webAPITask = new DecorateDocumentRequest(applicationID, applicationKey, inputFile, outputTXTFile, decorationDataFile);
-
+        DecorateDocumentRequest webAPITask = new DecorateDocumentRequest(applicationID, applicationKey, inputFile, outputPDFFile, decorationDataFile);
         webAPITask.execute();
+
         PropertiesRequest webAPIPropertiesTask = new PropertiesRequest(applicationID, applicationKey, inputFile, outputTXTFile, "");
         webAPIPropertiesTask.execute();
+
+        AddImagesRequest webAPIAddImagesTask = new AddImagesRequest(applicationID, applicationKey, inputFile, outputPDFFile, imageSettingsFile,inputImageFile);
+        webAPIAddImagesTask.execute();
     }
 
 
