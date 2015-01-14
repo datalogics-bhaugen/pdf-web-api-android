@@ -25,7 +25,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class BasicRequest extends AsyncTask {
 
-    final static String WEB_API_URL = "https://pdfprocess.datalogics-cloud.com/api/actions/";
+    final static String WEB_API_URL = "https://pdfprocess.datalogics.com/api/actions/";
 
     String applicationID;
     String applicationKey;
